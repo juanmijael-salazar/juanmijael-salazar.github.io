@@ -6,9 +6,18 @@
 
 const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-setTimeout(function() {
-  location.reload();
-}, 100);
+window.addEventListener('load', function() {
+  // Función que se ejecuta al cargar la página
+  function reloadOnce() {
+      // Recargar la página
+      location.reload();
+      // Desvincular el evento 'load' después de la primera recarga
+      window.removeEventListener('load', reloadOnce);
+  }
+
+  // Agregar el evento 'load' que ejecuta la función reloadOnce
+  window.addEventListener('load', reloadOnce);
+});
 
 /**
  * header sticky & go to top
