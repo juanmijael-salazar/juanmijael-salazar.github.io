@@ -6,8 +6,12 @@
 
 const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-
-
+window.onload = function() {
+  if(!window.location.hash) {
+      window.location = window.location + '#loaded';
+      window.location.reload();
+  }
+}
 
 /**
  * header sticky & go to top
