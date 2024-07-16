@@ -1909,6 +1909,7 @@ textarea.input-field {
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  animation-fill-mode: forwards;
 }
 .mel-item-wrapper:hover {
   -webkit-box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2);
