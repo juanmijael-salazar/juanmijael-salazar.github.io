@@ -6,7 +6,9 @@
 
 const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-
+setTimeout(function() {
+  location.reload();
+}, 100);
 
 /**
  * header sticky & go to top
