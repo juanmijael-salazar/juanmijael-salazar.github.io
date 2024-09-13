@@ -6,13 +6,14 @@
 
 const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
+/**
 window.onload = function() {
   if(!window.location.hash) {
       window.location = window.location + '#loaded';
       window.location.reload();
   }
 }
-
+*/
 
 
 
@@ -81,6 +82,16 @@ for (let i = 0; i < toggleBtns.length; i++) {
 
 const themeToggleBtn = document.querySelector("[data-theme-btn]");
 
+
+//Verifica si el tema es light para invertir el logo
+if (localStorage.getItem("theme") === "light_theme") {
+  document.querySelector(".milogo").style.filter = "none";
+} else {
+  document.querySelector(".milogo").style.filter = "invert(100%)";
+}
+
+
+
 themeToggleBtn.addEventListener("click", function () {
 
   elemToggleFunc(themeToggleBtn);
@@ -90,7 +101,7 @@ themeToggleBtn.addEventListener("click", function () {
     document.body.classList.add("light_theme");
     localStorage.setItem("theme", "light_theme");
 
-    document.querySelector(".milogo").style.filter = "invert(100%)"; /** CAMBIA COLOR MI LOGO**/
+    document.querySelector(".milogo").style.filter = "none"; /** CAMBIA COLOR MI LOGO**/
 
   } else {
     document.body.classList.add("dark_theme");
@@ -98,10 +109,11 @@ themeToggleBtn.addEventListener("click", function () {
     
     localStorage.setItem("theme", "dark_theme");
 
-    document.querySelector(".milogo").style.filter = "none";
+    document.querySelector(".milogo").style.filter = "invert(100%)";
   }
 
 });
+
 
 /**
  * check & apply last time selected theme from localStorage
@@ -247,25 +259,28 @@ window.addEventListener("load", () => {
 
 // isotope
 
-var $grid = $(".mel-grid").isotope({
-  itemSelector: ".mel-grid-item",
-  columnWidth: ".mel-grid-sizer",
-  percentPosition: true
-});
+$(".mel-grid").imagesLoaded(function () {
+  var $grid = $(".mel-grid").isotope({
+    itemSelector: ".mel-grid-item",
+    columnWidth: ".mel-grid-sizer",
+    percentPosition: true
+  });
 
+  $grid.isotope('layout'); // Recalcular layout después de la carga de las imágenes
 
-// bind filter button click
-$(".mel-filter-nav").on("click", ".mel-filter", function () {
-  var filterValue = $(this).attr("data-filter");
-  $grid.isotope({ filter: filterValue });
-});
+  // bind filter button click
+  $(".mel-filter-nav").on("click", ".mel-filter", function () {
+    var filterValue = $(this).attr("data-filter");
+    $grid.isotope({ filter: filterValue });
+  });
 
-// change is-checked class on buttons
-$(".mel-filter-nav").each(function (i, buttonGroup) {
-  var $buttonGroup = $(buttonGroup);
-  $buttonGroup.on("click", ".mel-filter", function () {
-    $buttonGroup.find(".is-checked").removeClass("is-checked");
-    $(this).addClass("is-checked");
+  // change is-checked class on buttons
+  $(".mel-filter-nav").each(function (i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    $buttonGroup.on("click", ".mel-filter", function () {
+      $buttonGroup.find(".is-checked").removeClass("is-checked");
+      $(this).addClass("is-checked");
+    });
   });
 });
 
