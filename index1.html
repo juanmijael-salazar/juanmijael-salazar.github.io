@@ -24,6 +24,11 @@
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
+      <!-- 
+    - custom css link ESTIDO DE LITHBOX PARA IMAGENES DE ABOUT ME
+  -->
+  <link rel="stylesheet" href="./assets/lightbox2/dist/css/lightbox.min.css">
+
   <!-- 
     - google font link
   -->
@@ -411,30 +416,26 @@
       -->
 
       <section class="about" id="about">
-        <section class="hidden1">
-          <figure class="about-banner">
-            <img src="./assets/images/about-banner.png" alt="A man in a alice blue shirt with a thinking expression"
-              class="w-100">
-          </figure>
-        </section>
 
-        <section class="hidden2">
+        <section class="hidden1">
           <div class="about-content section-content">
 
             <p class="section-subtitle">Sobre mi</p>
 
-            <h2 class="h3 section-title">¿Quieres Conocerme?</h2>
+            <h2 class="h3 section-title">Hey, te invito a conocerme!</h2>
 
-            <section class="hidden2">
+            <section class="hidden1">
               <p class="section-text">
-                Soy ingeniero de datos con una sólida experiencia en la gestión y optimización de flujos de trabajo en datos complejos. 
-                Tengo experiencia en procesos ETL e implementación de pipelines, utilizando herramientas de última generación como SQL Server, 
-                Python, Azure Storage, Azure Data Factory, Apache Airflow y Spark.
+                <b style="font-size: 30px;">H</b>ola! Me llamo Mijael, soy un amante de la tecnología especialmente de los datos y la inteligencia artificial, a lo largo de mi desarrollo profesional y 
+                experiencia logré incrementar mi destreza en la gestión, optimización de Data Flows, Cloud Computing y el análisis de datos complejos. 
                 <br>
-                También poseo una sólida base en Big Data, Power BI, Workloads, uso de GIT y manejo de metodologías ágiles pudiendo liderar el desarrollo de un proyecto.
+                Estoy muy familiarizado en procesos ETL y procesamiento de datos, utilizando herramientas de última generación como SQL Server,  Python, Azure Storage, 
+                Azure Data Factory, Apache Hadoop, Power BI y Spark. También poseo una sólida base en Big Data, Machine Learning, uso de GIT y el manejo de metodologías ágiles siendo capaz de liderar el desarrollo de proyectos.
+                <br><br>
+                Actualmente me enfoco en garantizar la integridad, calidad y seguridad de los datos, facilitando el análisis avanzado y la toma de decisiones estratégicas.
                 <br>
-                Me enfoco en garantizar la integridad, calidad y seguridad de los datos, facilitando el análisis avanzado y la toma de decisiones estratégicas. 
-                Me apasionan la innovación y la mejora continua, lo cual me compromete a impulsar el éxito empresarial mediante soluciones de datos eficaces.
+                Me considero una persona que respeta mucho la ética y la honestidad, tengo pensamiento crítico sobre las formas de solucionar un problema, me adapto rápidamente en entornos nuevos y estimo que puedo manejar 
+                el estrés y situaciones bajo presión. Estoy entusiasmado por la innovación y la mejora continua, lo cual me compromete a impulsar el éxito empresarial mediante soluciones de datos eficaces.
 
               </p>
             </section>
@@ -447,6 +448,61 @@
 
           </div>
         </section>
+
+
+        <section class="hidden2">
+          <figure class="about-banner">
+            <div class="grid-gallery">
+              <div class="grid-item-gallery">
+                <a href="./assets/images/about_me/1.jpg" data-lightbox="gridImage">
+                  <img src="./assets/images/about_me/1.jpg"/>
+                </a>
+              </div>
+
+              <div class="grid-item-gallery">
+                <a href="./assets/images/about_me/2.jpg" data-lightbox="gridImage">
+                  <img src="./assets/images/about_me/2.jpg"/>
+                </a>
+              </div>
+
+              <div class="grid-item-gallery">
+                <a href="./assets/images/about_me/3.jpg" data-lightbox="gridImage">
+                  <img src="./assets/images/about_me/3.jpg"/>
+                </a>
+              </div>
+
+              <div class="grid-item-gallery">
+                <a href="./assets/images/about_me/4.jpg" data-lightbox="gridImage">
+                  <img src="./assets/images/about_me/4.jpg"/>
+                </a>
+              </div>
+
+              <div class="grid-item-gallery">
+                <a href="./assets/images/about_me/5.jpeg" data-lightbox="gridImage">
+                  <img src="./assets/images/about_me/5.jpeg"/>
+                </a>
+              </div>
+
+              <div class="grid-item-gallery">
+                <a href="./assets/images/about_me/6.jpeg" data-lightbox="gridImage">
+                  <img src="./assets/images/about_me/6.jpeg"/>
+                </a>
+              </div>
+                <!--
+                <img src="./assets/images/about-banner.png" alt="A man in a alice blue shirt with a thinking expression" class="w-100">
+                -->
+            </div>
+          </figure>
+        </section>
+        <!--
+        <section class="hidden1">
+          <figure class="about-banner">
+            <img src="./assets/images/about-banner.png" alt="A man in a alice blue shirt with a thinking expression"
+              class="w-100">
+          </figure>
+        </section>
+        -->
+
 
       </section>
 
@@ -1014,26 +1070,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <!-- 
         - #CONTACT
       -->
@@ -1044,7 +1080,7 @@
 
             <p class="section-subtitle">Contacto</p>
 
-            <h2 class="h3 section-title">¿Quieres contactarte conmigo para cualquier Pregunta o Colaboración? Por Favor Deja un Mensaje.</h2>
+            <h2 class="h3 section-title">¿Quieres contactarte conmigo para cualquier Pregunta o Colaboración? Por favor deja un mensaje.</h2>
 
             <section class="hidden1">
               <p class="section-text">
@@ -1285,6 +1321,7 @@
   <!-- 
     - custom js link
   -->
+  <script src="./assets/lightbox2/dist/js/lightbox.min.js"></script>   <!-- DE LIGHTBOX PARA IMAGENDES DE ABOUT ME-->
   <script src="./assets/js/script.js"></script>
 
   <!-- 
