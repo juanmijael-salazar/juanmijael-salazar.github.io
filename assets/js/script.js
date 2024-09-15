@@ -38,6 +38,8 @@ window.addEventListener("scroll", function () {
 
 
 
+
+
 /**
  * navbar toggle
  */
@@ -361,3 +363,14 @@ const observer2 = new IntersectionObserver((entries) =>{
 
 const hiddenElements2 = document.querySelectorAll('.hidden2');
 hiddenElements2.forEach((el) => observer2.observe(el));
+
+/* LIGHTBOX PARA IMAGENES DE ABOUUT ME*/
+
+lightbox.option({
+  resizeDuration: 0,
+  wrapAround: true,
+  disableScrolling: true,
+  fadeDuration: 200,
+  imageFadeDuration: 200,
+
+});
