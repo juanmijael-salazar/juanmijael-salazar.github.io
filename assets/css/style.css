@@ -792,7 +792,7 @@ main { overflow-x: hidden; }
 .about { padding-block: var(--section-padding); }
 
 .about-banner {
-  max-width: 400px;
+  max-width: 600px;
   margin-inline: auto;
   margin-bottom: 80px;
 }
@@ -1520,7 +1520,7 @@ textarea.input-field {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 30px;
+    gap: 0px;
   }
 
   .about-banner { margin-bottom: 0; }
@@ -1627,7 +1627,7 @@ textarea.input-field {
    * ABOUT
    */
 
-  .about-banner { max-width: 450px; }
+  .about-banner { max-width: 600px; }
 
 }
 
@@ -2183,4 +2183,58 @@ textarea.input-field {
 
 
 
+/* ABOUT ME IMAGENES */
 
+.grid-gallery {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+  background-color: transparent;
+
+}
+
+.grid-gallery .grid-item-gallery {
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.grid-gallery .grid-item-gallery img{
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.grid-gallery .grid-item-gallery:hover img{
+  transform: scale(1.2);
+}
+
+.grid-gallery .grid-item-gallery a{
+  cursor: zoom-in;
+
+}
+
+.grid-gallery .grid-item-gallery:nth-child(3n - 2) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+
+@media (max-width: 768px) {
+  .grid-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    grid-auto-rows: 200px;
+  }
+
+  .grid-gallery .grid-item-gallery:nth-child(3n - 2) {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
